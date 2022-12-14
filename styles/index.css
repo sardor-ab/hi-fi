@@ -1,0 +1,84 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 75px;
+  height: 60px;
+}
+
+.navItem {
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  background-color: #fafafa;
+}
+
+.mobile_menuToggler {
+  background-color: #000;
+  width: 15px;
+  height: 3px;
+  border-radius: 6px;
+}
+
+.mobile_menuToggler::before,
+.mobile_menuToggler::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 15px;
+  height: 3px;
+  border-radius: 6px;
+}
+
+.mobile_menuToggler::before {
+  transform: translateY(-5px);
+}
+
+.mobile_menuToggler::after {
+  transform: translateY(5px);
+}
+
+.mobile_menuToggler.open {
+  transform: translate(-50px);
+  background-color: transparent;
+}
+
+.mobile_menuToggler.open::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.mobile_menuToggler.open::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.aside_container {
+  display: none !important;
+  height: calc(100vh - 108px);
+}
+
+.aside {
+  position: absolute;
+  top: 0;
+}
+
+@media screen and (max-width: 425px) {
+  .aside_container.open {
+    display: flex !important;
+  }
+}
