@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1rem;
 }
 
 a {
@@ -77,8 +78,118 @@ a {
   top: 0;
 }
 
+.hero {
+  height: 650px;
+}
+
+.hero_right {
+  color: #fff;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 71px;
+  text-align: left;
+}
+
+.sub_title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: left;
+}
+
+.hero_leftContent {
+  background: url("../assets/man.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  bottom: 0;
+  border-radius: 0 0 35px 0;
+}
+
+.hero_background {
+  height: 650px;
+  background: url("../assets/hero_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 35px;
+}
+
+.button {
+  margin-top: 10px;
+  padding: 18px 53px;
+  background-color: #fff;
+  border-radius: 35px;
+  border: none;
+}
+
+.about_us {
+  top: 90%;
+}
+
+.about_usBackground {
+  width: 85%;
+}
+
+.about_usText {
+  top: 0;
+  left: 50%;
+  width: 85%;
+  transform: translate(-50%, 0%);
+  color: #fff;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 85%;
+}
+
+.about_usContent {
+  height: 85%;
+}
+
+@media screen and (min-width: 768px) {
+  .about_usBackground {
+    /* height: 300px; */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about_usBackground {
+    /* height: 100%; */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    text-align: center;
+  }
+
+  .sub_title {
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .aside_container.open {
     display: flex !important;
+  }
+
+  .hero {
+    height: 400px;
+  }
+
+  .hero_rightContent {
+    text-align: center;
+  }
+  .title {
+    font-size: 26px;
+    line-height: 35px;
+  }
+
+  .sub_title {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
