@@ -149,15 +149,17 @@ a {
   height: 85%;
 }
 
-@media screen and (min-width: 768px) {
-  .about_usBackground {
-    /* height: 300px; */
-  }
+.clients {
+  margin-top: 17rem;
 }
 
-@media screen and (min-width: 1024px) {
-  .about_usBackground {
-    /* height: 100%; */
+@media screen and (max-width: 991px) {
+  .title {
+    text-align: center;
+  }
+
+  .sub_title {
+    text-align: center;
   }
 }
 
@@ -168,6 +170,14 @@ a {
 
   .sub_title {
     text-align: center;
+  }
+
+  .clients {
+    margin-top: 15rem;
+  }
+
+  .clients_list {
+    gap: 3rem;
   }
 }
 
@@ -183,6 +193,7 @@ a {
   .hero_rightContent {
     text-align: center;
   }
+
   .title {
     font-size: 26px;
     line-height: 35px;
@@ -191,5 +202,9 @@ a {
   .sub_title {
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .clients {
+    margin-top: 10rem;
   }
 }
