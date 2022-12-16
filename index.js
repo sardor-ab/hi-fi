@@ -6,8 +6,12 @@ const mobile_menuTogglerContainer = document.querySelector(
 const mobile_menuToggler = document.querySelector(".mobile_menuToggler");
 const aside_container = document.querySelector(".aside_container");
 const aside = document.querySelector(".aside");
+const work_containerRightContent = document.querySelector(
+  ".work_containerRightContent"
+);
 
 const navItems = ["About", "Services", "Clients", "Blog", "Contact"];
+const workImages = [1, 2, 3, 4];
 
 // let isAsideOpen = false;
 
@@ -41,6 +45,16 @@ navItems.forEach((navItem) => {
   listItem.append(item);
 
   aside.append(listItem);
+});
+
+workImages.forEach((workImage) => {
+  const image = document.createElement("div");
+  image.classList.add("work_image");
+  image.style.backgroundImage = `url(./assets/work_${workImage}.png)`;
+  image.style.backgroundSize = "cover";
+  image.style.backgroundRepeat = "no-repeat";
+
+  work_containerRightContent.append(image);
 });
 
 const handleToogle = () => {

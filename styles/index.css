@@ -118,12 +118,21 @@ a {
   border-radius: 35px;
 }
 
+.buttonPrimary {
+  background-color: #14213d;
+  color: #fff;
+}
+
+.buttonTransparent {
+  background-color: #fff;
+  color: #14213d;
+}
+
 .button {
+  border: none;
   margin-top: 10px;
   padding: 18px 53px;
-  background-color: #fff;
   border-radius: 35px;
-  border: none;
 }
 
 .about_us {
@@ -173,10 +182,21 @@ a {
   top: 50%;
 }
 
-.service_leftContent {
+.service_leftContent,
+.work_containerRightContent {
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr;
+}
+
+.work {
+  margin-top: 10rem;
+}
+
+.work_image {
+  border-radius: 35px;
+  height: 250px;
+  width: 250px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -184,9 +204,18 @@ a {
     margin-top: 150px;
   }
 }
+
 @media screen and (max-width: 1024px) {
   .service_right {
     width: 70%;
+  }
+
+  .work_containerRightContent {
+    margin-top: 5rem;
+  }
+
+  .work_image {
+    width: 100%;
   }
 }
 
@@ -272,5 +301,10 @@ a {
 
   .service_rightDots {
     width: 70%;
+  }
+
+  .service_leftContent,
+  .work_containerRightContent {
+    grid-template-columns: 1fr;
   }
 }
