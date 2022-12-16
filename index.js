@@ -9,9 +9,27 @@ const aside = document.querySelector(".aside");
 const work_containerRightContent = document.querySelector(
   ".work_containerRightContent"
 );
+const product_projects = document.querySelector(".product_projects");
 
 const navItems = ["About", "Services", "Clients", "Blog", "Contact"];
 const workImages = [1, 2, 3, 4];
+const projects = [
+  {
+    id: 1,
+    title: "PT. ABCDE",
+    description: "Web Development",
+  },
+  {
+    id: 2,
+    title: "Rose Wood",
+    description: "SEO",
+  },
+  {
+    id: 3,
+    title: "CoSpace",
+    description: "Presentation Template",
+  },
+];
 
 // let isAsideOpen = false;
 
@@ -87,6 +105,31 @@ workImages.forEach((workImage) => {
   }
 
   work_containerRightContent.append(image);
+});
+
+projects.forEach((project) => {
+  const card = document.createElement("div");
+  card.classList.add("d-flex", "flex-column", "my-3");
+
+  const image = document.createElement("img");
+  image.classList.add("project");
+  image.src = `./assets/project_${project.id}.png`;
+
+  const title = document.createElement("span");
+  title.classList.add("title", "text-center", "my-3");
+  title.innerHTML = project.title;
+
+  const description = document.createElement("span");
+  description.classList.add("sub_title", "text-center", "my-3");
+  description.innerHTML = project.description;
+
+  const see_more_btn = document.createElement("button");
+  see_more_btn.classList.add("button", "buttonPrimary");
+  see_more_btn.innerHTML = "See details";
+
+  card.append(image, title, description, see_more_btn);
+
+  product_projects.append(card);
 });
 
 const handleToogle = () => {
