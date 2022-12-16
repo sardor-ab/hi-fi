@@ -1,3 +1,4 @@
+const body = document.getElementById("body");
 const navbar = document.querySelector(".navbar-nav");
 const mobile_menuTogglerContainer = document.querySelector(
   ".mobile_menuTogglerContainer"
@@ -46,9 +47,11 @@ const handleToogle = () => {
   const isAsideOpen = mobile_menuToggler.classList.contains("open");
   //   if (mobile_menuToggler.classList.contains("open")) {
   if (isAsideOpen) {
+    body.style.overflow = "scroll";
     mobile_menuToggler.classList.remove("open");
     aside_container.classList.remove("open");
   } else {
+    body.style.overflow = "hidden";
     mobile_menuToggler.classList.add("open");
     aside_container.classList.add("open");
   }
