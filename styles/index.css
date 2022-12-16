@@ -199,6 +199,37 @@ a {
   width: 250px;
 }
 
+.circle {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transform: translate(50%, -50%);
+  background-color: rgba(252, 163, 17, 0.5);
+}
+
+.semiCircle {
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  border-radius: 50px 50px 0 0;
+  top: 20%;
+  left: 0;
+  background-color: rgba(20, 33, 61, 0.5);
+  transform: scaleY(-1) translate(-50%, 0);
+}
+
+.extraDots {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  right: 0px;
+  transform: translate(25%, 50%);
+  z-index: -1;
+}
+
 @media screen and (min-width: 1024px) {
   .service_left {
     margin-top: 150px;

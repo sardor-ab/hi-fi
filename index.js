@@ -54,6 +54,38 @@ workImages.forEach((workImage) => {
   image.style.backgroundSize = "cover";
   image.style.backgroundRepeat = "no-repeat";
 
+  if (workImage == 2) {
+    image.style.position = "relative";
+
+    const circle = document.createElement("div");
+
+    circle.classList.add("circle", "d-none", "d-md-flex");
+
+    image.append(circle);
+  }
+
+  if (workImage == 3) {
+    image.style.position = "relative";
+
+    const semi_circle = document.createElement("div");
+
+    semi_circle.classList.add("semiCircle", "d-none", "d-md-flex");
+
+    image.append(semi_circle);
+  }
+
+  if (workImage == 4) {
+    image.style.position = "relative";
+
+    const dots = document.createElement("img");
+
+    dots.src = "./assets/extra_dotGrid.png";
+
+    dots.classList.add("extraDots", "d-none", "d-md-flex");
+
+    image.append(dots);
+  }
+
   work_containerRightContent.append(image);
 });
 
