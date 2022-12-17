@@ -240,13 +240,82 @@ a {
 
 .project {
   border-radius: 35px;
-  /* width: 300px; */
-  /* height: 300px; */
+}
+
+.testimonials {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.testimonials_leftContent {
+  width: 50%;
+}
+
+.testimonials_image {
+  border-radius: 35px;
+}
+
+.testimonials_dotsYellow {
+  top: 0;
+  right: 20%;
+  z-index: 1;
+}
+
+.testimonials_dotsBlack {
+  top: -10%;
+  right: 10%;
+  z-index: -1;
+}
+
+.testimonials_rectangle,
+.testimonials_circle {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(252, 163, 17, 0.5);
+}
+
+.testimonials_rectangle {
+  top: 25%;
+  left: 15%;
+  z-index: -1;
+}
+
+.testimonials_circle {
+  top: 75%;
+  right: 15%;
+  border-radius: 50%;
+}
+
+.testimonials_btns {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .testimonials_btns {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .work_image {
+    width: 100%;
+  }
+
+  .work_containerRightContent {
+    margin-top: 5rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .service_left {
     margin-top: 150px;
+  }
+
+  .testimonials_image {
+    width: 100%;
   }
 }
 
@@ -255,12 +324,8 @@ a {
     width: 70%;
   }
 
-  .work_containerRightContent {
+  .testimonials_right {
     margin-top: 5rem;
-  }
-
-  .work_image {
-    width: 100%;
   }
 }
 
@@ -309,6 +374,23 @@ a {
   .service_rightService {
     width: 100%;
   }
+
+  .testimonials_leftContent {
+    width: 100%;
+  }
+
+  .testimonials_dotsBlack {
+    top: -5%;
+    right: 5%;
+  }
+
+  .testimonials_dotsYellow {
+    right: 20%;
+  }
+
+  .testimonials_circle {
+    right: 15%;
+  }
 }
 
 @media screen and (max-width: 765px) {
@@ -345,11 +427,29 @@ a {
   }
 
   .service_rightDots {
-    width: 70%;
+    width: 50%;
+    top: -10%;
+    right: -15%;
   }
 
   .service_leftContent,
   .work_containerRightContent {
     grid-template-columns: 1fr;
+  }
+
+  .testimonials_image {
+    width: 100%;
+  }
+
+  .testimonials_dotsBlack {
+    right: 0;
+  }
+
+  .testimonials_dotsYellow {
+    right: 0%;
+  }
+
+  .testimonials_circle {
+    right: 0;
   }
 }
