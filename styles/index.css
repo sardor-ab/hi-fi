@@ -291,6 +291,29 @@ a {
   justify-content: center;
 }
 
+.footer_content {
+  background-image: url("../assets/footer.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px;
+  border-radius: 35px;
+}
+
+.footer_contentTopLeft {
+  width: 20%;
+  margin: auto;
+}
+
+.footer_title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.footer_contentTopRightItem {
+  width: 25%;
+}
+
 @media screen and (min-width: 1200px) {
   .testimonials_btns {
     display: block;
@@ -326,6 +349,10 @@ a {
 
   .testimonials_right {
     margin-top: 5rem;
+  }
+
+  .footer_contentTopLeft {
+    width: 50%;
   }
 }
 
@@ -390,6 +417,18 @@ a {
 
   .testimonials_circle {
     right: 15%;
+  }
+
+  .footer_contentTopLeft > img {
+    margin: auto;
+  }
+
+  .footer_contentTopRightItem {
+    width: 100%;
+  }
+
+  .footer_title {
+    text-align: center;
   }
 }
 
